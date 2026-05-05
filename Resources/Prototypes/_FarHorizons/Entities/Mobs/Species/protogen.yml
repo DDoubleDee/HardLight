@@ -1119,6 +1119,11 @@
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: ProtoResomi
+  - type: Vocal # Bring resomi sounds to proto-resomi
+      sounds:
+        Male: UnisexResomi
+        Unsexed: UnisexResomi
+        Female: UnisexResomi
   - type: HumanoidAppearance
     species: ProtoResomi
     hideLayersOnEquip:
