@@ -231,14 +231,15 @@
   - type: SizeAttribute
     tall: true
   - type: TallWhitelist
-    scale: 1.25
-    borgScale: 1
+    scale: 1.3
+    borgScale: 1.1
     borgFixtureRadius: 0.45
     densityMultiplier: 1.25
     cosmeticOnly: false
   - type: CritThresholdModifier
     critThresholdDelta: 25
-  - type: BigWeaponHandling
+  - type: GunAccuracyModifier
+    spreadMultiplier: 1.25
   - type: MeleeDamageModifier
     flatBonus: 2
     damageType: Blunt
@@ -334,7 +335,6 @@
   - type: TraitCyborgPowerDrawModifier
     multiplier: 0.5
 
-
 - type: trait
   id: Pettable
   name: pettable-name
@@ -349,3 +349,29 @@
     interactSuccessSpawn: EffectHearts
     interactSuccessSound:
       path: /Audio/Animals/fox_squeak.ogg
+
+- type: trait
+  id: ArmAmputeeL
+  name: trait-amputee-left-arm-name
+  description: trait-amputee-left-arm-desc
+  category: Physical
+  cost: -6
+  mutuallyExclusiveTraits:
+  - ArmAmputeeR
+  components:
+  - type: Amputee
+    removeBodyPart: Arm
+    partSymmetry: Left
+
+- type: trait
+  id: ArmAmputeeR
+  name: trait-amputee-right-arm-name
+  description: trait-amputee-right-arm-desc
+  category: Physical
+  cost: -6
+  mutuallyExclusiveTraits:
+  - ArmAmputeeL
+  components:
+  - type: Amputee
+    removeBodyPart: Arm
+    partSymmetry: Right

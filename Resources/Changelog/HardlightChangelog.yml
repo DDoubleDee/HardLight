@@ -3154,3 +3154,400 @@ Entries:
         Key: invalid`.
   id: 339
   time: '2026-04-24T22:12:52.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Throttled the docking-arm gateway "Spawn New Dock" button so rapid
+        clicks no longer flood the server log when no clear spawn space is
+        available.
+  id: 340
+  time: '2026-04-25T05:03:31.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Tweak
+      message: >-
+        Radar console blip refresh and gathering have been overhauled for
+        performance — heavy combat with multiple ships loaded should see
+        noticeably smoother server tick times. Admins can live-tune
+        `hardlight.radar.min_request_ms` / `hardlight.radar.cache_ttl_ms` if
+        they want a different refresh cadence.
+  id: 341
+  time: '2026-04-25T05:08:32.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: Added mono upstream features for shields and AI
+  id: 342
+  time: '2026-04-25T05:29:14.0000000+00:00'
+- author: DDoubleDee
+  changes:
+    - type: Add
+      message: Added snack vending machines back to the expedition spawn pool!
+  id: 343
+  time: '2026-04-25T05:29:25.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Tweak
+      message: Gateway sound to be a bit easier on the ears
+    - type: Tweak
+      message: Allowed synths to take the vampiric trait
+    - type: Tweak
+      message: removed unusable cybernetics from research/crafting
+    - type: Fix
+      message: fixed injector deny popup localization not working
+  id: 344
+  time: '2026-04-25T21:13:56.0000000+00:00'
+- author: VoidedDevNull
+  changes:
+    - type: Add
+      message: New Starlight Tiles Ported
+  id: 345
+  time: '2026-04-25T21:15:17.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Fixed `MothershipCore` spamming stack traces (and tanking server
+        tickrate) when tools were used on it.
+    - type: Fix
+      message: >-
+        Fixed solution containers spamming stack traces every tick after
+        FTL/shipyard moves, a major source of recent server lag.
+  id: 346
+  time: '2026-04-25T21:16:48.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Add
+      message: >-
+        Xenoborg byte drone ships now patrol deep space, only attack ships that
+        get within ~1.2 km, and chase ships that shoot them or get within 500 m.
+        Aggro fades after 30 s of no contact.
+    - type: Tweak
+      message: Xenoborg byte drone ships no longer spawn within 5 km of the trade hub.
+    - type: Tweak
+      message: >-
+        AI ship-mounted turrets no longer fight the AI core for steering;
+        mounted turrets only fire, the core does the flying.
+  id: 347
+  time: '2026-04-25T22:05:54.0000000+00:00'
+- author: GravastarDragon
+  changes:
+    - type: Add
+      message: >-
+        Added four new borg chassis options. one in sec, service, engineering,
+        and salvage.
+  id: 348
+  time: '2026-04-25T22:17:40.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Fixed ship gun projectiles colliding with the firing ship and appearing
+        to hit the center of the ship.
+  id: 349
+  time: '2026-04-25T22:39:32.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Tweak
+      message: >-
+        Byte drones now only fully commit inside 500m, soft-chase out to 1000m,
+        and disengage after 10 seconds past 1000m.
+    - type: Tweak
+      message: >-
+        Gunnery console radar can now scroll out to 1500m for better situational
+        awareness.
+  id: 350
+  time: '2026-04-25T22:39:44.0000000+00:00'
+- author: Kronyx
+  changes:
+    - type: Fix
+      message: >-
+        Ship projectiles now inherit firing platform velocity, fixing
+        moving-ship shot origin/range weirdness.
+    - type: Fix
+      message: >-
+        Gunnery radar now keeps projectile/hitscan feedback visible at expected
+        engagement distances.
+    - type: Tweak
+      message: Ship-class hitscan laser range set to 500m.
+    - type: Tweak
+      message: >-
+        Byte AI now scales by rank (small/medium/large) for speed, aim quality,
+        disengage behavior, and spawn distance.
+  id: 351
+  time: '2026-04-26T21:39:37.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Secbug, Djbug, Engineerbug, and Minerbug borg chassis now display their
+        correct sprites instead of flashing error signs.
+  id: 352
+  time: '2026-04-26T21:39:51.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Fixed flatpacks incorrectly saying "No room to unpack!" on valid station
+        tiles.
+  id: 353
+  time: '2026-04-26T21:40:39.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Fix
+      message: Fixed all xenoborgs apart from the quad looking like engis
+  id: 354
+  time: '2026-04-26T21:42:08.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Prevented Station AI vision from occasionally throwing concurrent
+        collection exceptions when multiple LOS/range checks run in the same
+        tick.
+  id: 355
+  time: '2026-04-26T21:43:56.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaked a bunch of modules to be more like what they are over on
+        wizden/SL (minus changes I couldn't make due to the omega PR revert)
+    - type: Fix
+      message: Fixed sec borg locales
+  id: 356
+  time: '2026-04-28T07:36:16.0000000+00:00'
+- author: Illumos
+  changes:
+    - type: Add
+      message: BSO hardsuit
+    - type: Add
+      message: BSO overcoat
+    - type: Add
+      message: BSO magboots
+  id: 357
+  time: '2026-04-28T07:37:31.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Fix
+      message: 'caseless ammo no longer hallucinates casings '
+  id: 358
+  time: '2026-04-28T10:04:52.0000000+00:00'
+- author: Jerulean
+  changes:
+    - type: Add
+      message: Added about 45 new foods and 40 new drinks.
+  id: 359
+  time: '2026-04-29T20:19:46.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Fix
+      message: Fixed bluespace syringe draw amount.
+  id: 360
+  time: '2026-04-29T23:43:35.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Icon smoothing can now be toggled in user graphics settings.
+  id: 361
+  time: '2026-04-29T23:44:47.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Harbor Masters now have new icons better representing their department.
+    - type: Remove
+      message: Harbor Masters no longer have All Access.
+    - type: Tweak
+      message: Harbor Masters now have accesses relevant to their jobs.
+    - type: Tweak
+      message: >-
+        Harbor Masters and Freelancers now occupy the Frontier category in the
+        Crew Manifest.
+    - type: Tweak
+      message: >-
+        The Crew Manifest's categories and layouts have been reorganized for
+        better readability.
+    - type: Tweak
+      message: >-
+        The loadout menu's categories and layouts have been reorganized for
+        better readability.
+    - type: Fix
+      message: >-
+        Two empty categories have been removed from the loadout menu to reduce
+        clutter.
+  id: 362
+  time: '2026-04-29T23:47:07.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Mantis loadouts can now actually be customized.
+    - type: Fix
+      message: >-
+        Passengers and Barkeepers should no longer spawn with survival boxes in
+        place of their backpacks.
+    - type: Fix
+      message: Mantis should no longer spawn duplicate equipment on spawn.
+  id: 363
+  time: '2026-04-30T00:14:18.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Set `transferAmounts: []` on all three Dynamic modes.
+        `AddSetTransferVerbs` exits early on an empty list; `GetTransferAmount`
+        falls back to the solution's current volume, so the full contents are
+        always injected.
+    - type: Fix
+      message: >-
+        Added `AudioSystem` dependency to `InjectorSystem` and a `PlayPvs` call
+        after a successful bloodstream injection when the active mode defines an
+        `injectSound`. Wired `injectSound:
+        /Audio/Items/Medical/jet_injector.ogg` into all three Dynamic modes.
+    - type: Fix
+      message: >-
+        Added `AdvancedJetInjector` to the `AdvancedTreatment` technology in
+        `civilianservices.yml`.
+    - type: Fix
+      message: >-
+        Jet injector no longer shows selectable 5u/15u transfer amounts; always
+        injects full reservoir.
+    - type: Fix
+      message: Jet injector now plays its unique injection sound on use.
+    - type: Fix
+      message: >-
+        Advanced Jet Injector is now researchable via Advanced Treatment
+        (CivilianServices tier 2).
+  id: 364
+  time: '2026-04-30T20:20:54.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Medicated sutures and regenerative meshes can again be crafted in the
+        medical assembler using lathe-produced bruise packs and ointments.
+  id: 365
+  time: '2026-04-30T20:31:44.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Switchable-type cyborgs (SecBorg, MediBorg, etc.) no longer lose their
+        built-in department radio channel when an encryption key is added to or
+        removed from them.
+  id: 366
+  time: '2026-04-30T20:35:57.0000000+00:00'
+- author: IngvarJackal
+  changes:
+    - type: Tweak
+      message: CTLA drives have correct speeds
+    - type: Tweak
+      message: gunnery console has shield status and draws shields
+  id: 367
+  time: '2026-04-30T20:59:38.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Handheld fax machines can now be spawned by admins.
+    - type: Add
+      message: >-
+        Service Cyborgs now have access to fax machines as part of the
+        bureaucracy module.
+    - type: Add
+      message: Service Cyborgs can now fabricate blank sheets of paper.
+    - type: Tweak
+      message: Fax machine UI has received minor improvements for better clarity.
+  id: 368
+  time: '2026-05-01T00:19:28.0000000+00:00'
+- author: Eb-
+  changes:
+    - type: Tweak
+      message: >-
+        Bags of Holding now have a 25% move speed penalty, to encourage use of
+        other bags such as: tactical pack, rucksack, explorer pack
+  id: 369
+  time: '2026-05-01T03:49:15.0000000+00:00'
+- author: fenndragon
+  changes:
+    - type: Add
+      message: 'Added new world generation system '
+  id: 370
+  time: '2026-05-01T03:50:13.0000000+00:00'
+- author: Illumos
+  changes:
+    - type: Add
+      message: Added the noble suit to the clothesmate
+    - type: Add
+      message: Added the bloodstained aristocrat suit to clothesmate
+  id: 371
+  time: '2026-05-02T06:14:37.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Jet injector no longer shows selectable transfer amounts (1u, 5u, etc.)
+        in its right-click menu; it always injects the full reservoir.
+    - type: Fix
+      message: >-
+        Jet injector now plays its unique injection sound when used on humanoid
+        mobs.
+  id: 372
+  time: '2026-05-02T06:45:36.0000000+00:00'
+- author: Kronyxxx
+  changes:
+    - type: Fix
+      message: >-
+        Full-reservoir injector modes now clear stale transfer amount state, so
+        Advanced Jet Injectors correctly inject their full contents.
+  id: 373
+  time: '2026-05-02T07:50:25.0000000+00:00'
+- author: R3v3l4t1on
+  changes:
+    - type: Fix
+      message: Fixed a test
+  id: 374
+  time: '2026-05-02T07:51:13.0000000+00:00'
+- author: TrylobyteWasTaken
+  changes:
+    - type: Tweak
+      message: >-
+        The Ionizing Radiation Resistance mutation is now actually able to be
+        researched instead of taunting the geneticist all shift.
+  id: 375
+  time: '2026-05-02T19:05:16.0000000+00:00'
+- author: IngvarJackal
+  changes:
+    - type: Add
+      message: Return anaconda to the exped T2 loot table
+  id: 376
+  time: '2026-05-02T23:21:56.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Add
+      message: Added even more vampirism.
+  id: 377
+  time: '2026-05-05T03:30:26.0000000+00:00'
+- author: Shades
+  changes:
+    - type: Fix
+      message: Fixed The Dark getting deleted.
+  id: 378
+  time: '2026-05-05T03:35:40.0000000+00:00'
+- author: re-silvered
+  changes:
+    - type: Remove
+      message: Removed pirate rules since we lack pirates
+  id: 379
+  time: '2026-05-05T03:39:51.0000000+00:00'
+- author: NotLivyathan
+  changes:
+    - type: Add
+      message: Computer consoles now dynamically blend edges when placed side-by-side.
+  id: 380
+  time: '2026-05-05T03:42:12.0000000+00:00'
+- author: Aureuix
+  changes:
+    - type: Add
+      message: Added an amputee trait. one for both arms
+  id: 381
+  time: '2026-05-05T05:16:21.0000000+00:00'
