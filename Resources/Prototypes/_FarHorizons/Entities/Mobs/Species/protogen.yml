@@ -2438,6 +2438,11 @@
       shiveringHeatRegulation: 2000
       normalBodyTemperature: 261
       thermalRegulationTemperatureThreshold: 1
+    - type: Vocal # Bring avali sounds to proto-avali
+        sounds:
+          Male: MaleAvali
+          Female: FemaleAvali
+          Unsexed: MaleAvali
     - type: Stasis
       enterStasisAction: ActionStasisEnter
       exitStasisAction: ActionStasisExit
